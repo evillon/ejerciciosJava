@@ -1,17 +1,20 @@
+import static java.lang.System.out;
+
 public class Prog6{
     public static void main(String[] args){
-        int m,n;
+        int m;
+        int n;
         try{
             m = Integer.parseInt(args[0]);
             n = Integer.parseInt(args[1]);
         }catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("Error de entrada");
+            out.println("Error de entrada");
             return;
         }
-        max_min(m,n);
+        maxmin(m,n);
     }
     // Encuentra el máximo común divisor y el mínimo común múltiplo
-    private static void max_min(int m, int n){
+    private static void maxmin(int m, int n){
         int temp = 1;
         int yshu = 1;
         int bshu = m*n;
@@ -27,7 +30,7 @@ public class Prog6{
         }
         yshu = n;
         bshu /= n;
-        System.out.println(m+"con"+n+"El máximo común divisor es"+yshu);
-        System.out.println(m+"con"+n+"El mínimo común múltiplo es"+bshu);
+        out.println(m+"con"+n+"El máximo común divisor es"+yshu);
+        out.println(m+"con"+n+"El mínimo común múltiplo es"+bshu);
     }
 }

@@ -1,13 +1,15 @@
 import java.util.Scanner;
 
+import static java.lang.System.out;
+
 public class Prog8{
     public static void main(String[] args){
-        System.out.print("Para el valor de s = a + aa + aaa + aaaa + ..., ingrese el valor de a:");
+        out.print("Para el valor de s = a + aa + aaa + aaaa + ..., ingrese el valor de a:");
         Scanner scan = new Scanner(System.in).useDelimiter("\\s*");// Usa el espacio como separador
         int a = scan.nextInt();
         int n = scan.nextInt();
         scan.close();// Cerrar el escáner
-        System.out.println(expressed(2,5)+add(2,5));
+        out.println(expressed(2,5)+add(2,5));
     }
     // Expresión de suma
     private static String expressed(int a,int n){

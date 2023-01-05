@@ -1,10 +1,12 @@
+import static java.lang.System.out;
+
 public class Prog3{
     public static void main(String[] args){
         for(int i=100;i<1000;i++){
             if(isLotus(i))
-                System.out.print(i+" ");
+                out.print(i+" ");
         }
-        System.out.println();
+        out.println();
     }
     // Juzgando el número de narcisos
     private static boolean isLotus(int lotus){
@@ -17,9 +19,6 @@ public class Prog3{
         m = n/10;
         n -= m*10;
         sum += m*m*m + n*n*n;
-        if(sum==lotus)
-            return true;
-        else
-            return false;
+        return sum == lotus;
     }
 }

@@ -1,3 +1,5 @@
+import static java.lang.System.out;
+
 public class Prog2{
     public static void main(String[] args){
         int m = 1;
@@ -7,14 +9,14 @@ public class Prog2{
         for(int i=m;i<n;i++){
             if(isPrime(i)){
                 count++;
-                System.out.print(completaEspacios(i+" "));
+                out.print(completaEspacios(i+" "));
                 if(count%10==0){
-                    System.out.println();
+                    out.println();
                 }
             }
         }
-        System.out.println();
-        System.out.println("en "+m+" con "+n+" Compartido entre "+count+" Un número primo");
+        out.println();
+        out.println("en "+m+" con "+n+" Compartido entre "+count+" Un número primo");
     }
     // Determinar números primos
     private static boolean isPrime(int n){
@@ -23,12 +25,10 @@ public class Prog2{
             flag = false;
         else{
             for(int i=2;i<=Math.sqrt(n);i++){
-                if((n%i)==0 || n==1){
+                if(n % i == 0){
                     flag = false;
                     break;
                 }
-                else
-                    flag = true;
             }
         }
         return flag;

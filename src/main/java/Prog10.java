@@ -1,7 +1,10 @@
 import java.util.Scanner;
+
+import static java.lang.System.out;
+
 public class Prog10{
     public static void main(String[] args){
-        System.out.print("Por favor ingrese la altura de la pelota cuando aterrizó y el número de soluciones:");
+        out.print("Por favor ingrese la altura de la pelota cuando aterrizó y el número de soluciones:");
         Scanner scan = new Scanner(System.in).useDelimiter("\\s");
         int h = scan.nextInt();
         int n = scan.nextInt();
@@ -17,6 +20,6 @@ public class Prog10{
             h *=0.5 ;
             length += h;
         }
-        System.out.println("Después del primero "+n+" Tras el rebote, el balón pasó "+length+" Metro,"+" "+n+" La segunda altura de rebote es "+h+" Metro");
+        out.println("Después del primero "+n+" Tras el rebote, el balón pasó "+length+" Metro,"+" "+n+" La segunda altura de rebote es "+h+" Metro");
     }
 }
